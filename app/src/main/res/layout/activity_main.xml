@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/movie"
+        android:layout_width="268dp"
+        android:layout_height="124dp"
+        android:text="@string/movieList"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <Button
+        android:id="@+id/tel"
+        android:layout_width="268dp"
+        android:layout_height="124dp"
+        android:text="@string/telList"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/variety"
+        android:layout_width="268dp"
+        android:layout_height="124dp"
+        android:text="@string/varietyList"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="513dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</LinearLayout>

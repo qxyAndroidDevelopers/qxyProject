@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.bytedance.ies.ugc.aweme:opensdk-china-external:0.1.9.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b05f572f60bb96a79aa3e45f0a8224e2/transformed/opensdk-china-external-0.1.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b05f572f60bb96a79aa3e45f0a8224e2/transformed/opensdk-china-external-0.1.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b05f572f60bb96a79aa3e45f0a8224e2/transformed/opensdk-china-external-0.1.9.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bytedance.ies.ugc.aweme/opensdk-china-external/0.1.9.0/739f4df1d033971f93adab5398785d18e06e602/opensdk-china-external-0.1.9.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
