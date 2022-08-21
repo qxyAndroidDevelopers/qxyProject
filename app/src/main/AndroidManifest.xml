@@ -34,8 +34,7 @@
         </activity>
 
         <activity android:name=".List.TelActivity"/>
-        <activity android:name=".List.MovieActivity"/>
-        <activity android:name=".List.VarietyActivity"/>
+
 
     </application>
 

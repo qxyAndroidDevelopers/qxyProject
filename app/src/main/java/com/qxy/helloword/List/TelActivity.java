@@ -12,15 +12,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.qxy.helloword.Adapter.TelAdapter;
-import com.qxy.helloword.Bean.MovieBean;
-import com.qxy.helloword.Bean.TelBean;
-import com.qxy.helloword.Bean.VarietyBean;
+import com.qxy.helloword.Bean.ListBean;
 import com.qxy.helloword.R;
 import com.qxy.helloword.Utils.CallBacks;
+import com.qxy.helloword.Utils.Constants;
 import com.qxy.helloword.Utils.NetUtil;
+import java.util.Objects;
+
+import okhttp3.HttpUrl;
+import okhttp3.Request;
 
 public class TelActivity extends AppCompatActivity {
-    private final String TAG="TelActivitty";
+    private String TAG="TelActivitty";
 
     private RecyclerView recyclerView;
     private TelAdapter telAdapter;
@@ -29,7 +32,7 @@ public class TelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_tel);
+        setContentView(R.layout.activity_list );
         initView();
         initEvent();
     }
@@ -46,29 +49,38 @@ public class TelActivity extends AppCompatActivity {
 
     private void initEvent() {
 
-        NetUtil.getInstance().doGetToken(NetUtil.getInstance().getTokenHttp(), new CallBacks() {
+        HttpUrl.Builder urlBuilder = Objects.requireNonNull(HttpUrl.parse("https://open.douyin.com/oauth/client_token/")).newBuilder();
+        HttpUrl url = urlBuilder.addQueryParameter("client_key", Constants.CLIENT_KEY)
+                .addQueryParameter("client_secret", Constants.CLIENT_SECRET)
+                .addQueryParameter("grant_type", "client_credential").build();
+
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Content-Type", "multipart/form-data")
+                .get()
+                .build();
+
+        NetUtil.getInstance().doGetToken(request, new CallBacks() {
             @Override
             public void onSuccess(String result) {
                 Log.d(TAG,"access_token："+result);
 
-                NetUtil.getInstance().doGetList(NetUtil.getInstance().getHttp(result,2),2, new CallBacks() {
+                HttpUrl.Builder urlBuilder = Objects.requireNonNull(HttpUrl.parse("https://open.douyin.com/discovery/ent/rank/item/")).newBuilder();
+                HttpUrl url2 = urlBuilder.addQueryParameter("type", String.valueOf(2)).build();
+                Request request2 = new Request.Builder()
+                        .url(url2)
+                        .addHeader("Content-Type","application/json")
+                        .addHeader("access-token",result)
+                        .get()
+                        .build();
+
+                NetUtil.getInstance().doGetList(request2, new CallBacks() {
                     @SuppressLint({"SetTextI18n", "NotifyDataSetChanged"})
                     @Override
-
-                    public void onSuccessList(TelBean telBean) {
-                        telListDate.setText(telBean.active_time);
-                        telAdapter.addList(telBean.list);
+                    public void onSuccessList(ListBean listBean) {
+                        telListDate.setText(listBean.active_time);
+                        telAdapter.addList(listBean.list);
                         telAdapter.notifyDataSetChanged();
-                    }
-
-                    @Override
-                    public void onSuccessMovieList(MovieBean movieBean) {
-
-                    }
-
-                    @Override
-                    public void onSuccessVarietyList(VarietyBean varietyBean) {
-
                     }
 
                     @Override
@@ -87,17 +99,7 @@ public class TelActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onSuccessList(TelBean telBean) {}
-
-            @Override
-            public void onSuccessMovieList(MovieBean movieBean) {
-
-            }
-
-            @Override
-            public void onSuccessVarietyList(VarietyBean varietyBean) {
-
-            }
+            public void onSuccessList(ListBean listBean) {}
         });
     }
 }

@@ -6,22 +6,4 @@
     <string name="hello">hello</string>
     <string name="telListConstants">本期榜单 | 更新于</string>
     <string name="todo">TODO</string>
-    <string name="telName">电视剧名</string>
-    <string name="telActor">演员名</string>
-    <string name="telStartTime">播出时间</string>
-    <string name="telRank">Top 1</string>
-    <string name="movieName">电影名</string>
-    <string name="movieActor">电影演员</string>
-    <string name="movieStartTime">电影播出时间</string>
-    <string name="movieType">喜剧</string>
-    <string name="director">导演</string>
-    <string name="movieArea">地区</string>
-    <string name="movieRank">电影排行榜</string>
-    <string name="ticket">购 票</string>
-    <string name="varietyTitle">综艺名</string>
-    <string name="varietyLists">综艺排行榜</string>
-    <string name="varietyDirectors">导演</string>
-    <string name="eName">英文名</string>
-
-
 </resources>

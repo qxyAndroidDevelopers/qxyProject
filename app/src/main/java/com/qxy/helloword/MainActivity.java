@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.qxy.helloword.List.MovieActivity;
 import com.qxy.helloword.List.TelActivity;
-import com.qxy.helloword.List.VarietyActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         movieButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.setClass(MainActivity.this, MovieActivity.class);
+                intent.setClass(MainActivity.this, TelActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         varietyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.setClass(MainActivity.this, VarietyActivity.class);
+                intent.setClass(MainActivity.this, TelActivity.class);
                 startActivity(intent);
             }
         });
