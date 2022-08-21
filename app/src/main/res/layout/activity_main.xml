@@ -15,7 +15,10 @@
         android:text="@string/movieList"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="97dp" />
+        tools:layout_editor_absoluteY="97dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        />
 
     <Button
         android:id="@+id/tel"
@@ -24,7 +27,10 @@
         android:text="@string/telList"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="303dp" />
+        tools:layout_editor_absoluteY="303dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        />
 
     <Button
         android:id="@+id/variety"
@@ -33,7 +39,10 @@
         android:text="@string/varietyList"
         tools:layout_editor_absoluteX="71dp"
         tools:layout_editor_absoluteY="513dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        />
 
 
 

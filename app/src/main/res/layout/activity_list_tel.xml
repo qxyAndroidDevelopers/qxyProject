@@ -13,7 +13,11 @@
         android:text="@string/telList"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="27dp" />
+        tools:layout_editor_absoluteY="27dp"
+        android:background="@drawable/back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +30,7 @@
             android:layout_height="40dp"
             android:text="@string/telListConstants"
             android:gravity="center"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             />
 
         <TextView
@@ -41,7 +45,6 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/List"
-        class="androidx.appcompat.app.AlertController$RecycleListView"
         android:layout_width="match_parent"
         android:layout_height="769dp"
         android:layout_marginTop="130dp"
