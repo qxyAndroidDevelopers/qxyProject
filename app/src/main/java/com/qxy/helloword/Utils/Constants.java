@@ -6,6 +6,6 @@ public class Constants {
      */
     public static final String BASE_URL="https://open.douyin.com/";
 
-    public static final String CLIENT_KEY ="awziz4g36ziw9622";  // "awziz4g36ziw9622";
-    public static final String CLIENT_SECRET = "99bb8f6675953a51da0439932d5c9ae5";
+    public static final String CLIENT_KEY ="aw9kx72z6ly83laf";  // "awziz4g36ziw9622";
+    public static final String CLIENT_SECRET = "ab14240615744f85e45adc427af49816";
 }
